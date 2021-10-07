@@ -5,9 +5,14 @@ import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
+let basename = '';
+if (document.location.hostname === 'kotezh.github.io') {
+  basename = '/elfsight-rm';
+}
+
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
